@@ -1,0 +1,8 @@
+{
+    "name": "nodejs-demo-app",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+      "test": "echo \"No tests yet\" && exit 0"
+    }
+  }
