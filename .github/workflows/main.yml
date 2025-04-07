@@ -30,10 +30,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Log in to DockerHub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        run: echo "${{ secrets.9391034740vishnu}}" | docker login -u "${{ secrets.vishnuvardhan9391}}" --password-stdin
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/nodejs-demo-app:latest .
+        run: docker build -t ${{ secrets.vishnuvardhan9391}}/nodejs-demo-app:latest .
 
       - name: Push to DockerHub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/nodejs-demo-app:latest
+        run: docker push ${{ secrets.vishnuvardhan9391}}/nodejs-demo-app:latest
