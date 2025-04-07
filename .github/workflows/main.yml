@@ -28,12 +28,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Log in to DockerHub
-        run: echo "${{ secrets.9391034740vishnu}}" | docker login -u "${{ secrets.vishnuvardhan9391}}" --password-stdin
+     - name: Log in to DockerHub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.vishnuvardhan9391}}/nodejs-demo-app:latest .
+        run: docker build -t ${{secrets.DOCKER_USERNAME }}/nodejs-demo-app:v1.0
 
       - name: Push to DockerHub
-        run: docker push ${{ secrets.vishnuvardhan9391}}/nodejs-demo-app:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/nodejs-demo-app:v1.0
+
+     
